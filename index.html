@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cardapio Vovo Teteia Salgados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cardapio Vovô teteia Salgados</h1>
+        <p>O melhor lugar para voce matar sua fome e seu tempo</p>
+        <div class="categorias">
+            <section class="categoria">
+                <h2>Salgados</h2>
+                <ul>
+                    <li>Coxinha --- 7.00 R$</li>
+                    <li>Sfiha --- 8.00 R$</li>
+                    <li>Bolinha Queijo --- 7.00 R$</li>
+                </ul>
+            </section>
+            <section class="categoria">
+                <h2>Bebidas</h2>
+                <ul>
+                    <li>Coca-cola --- 5.00 R$</li>
+                    <li>Fanta --- 5.00 R$</li>
+                    <li>Energetico --- 7.00 R$</li>
+                </ul>
+            </section>
+        </div>
+        <a href="https://wa.me/5519996323159">Fazer o pedido</a>
+        <a href="https://instagram/vovoteteiasalgados">Siga nossa rede social</a>
+
+        <form>
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="tel">Seu Telefone:</label>
+            <input type="tel" id="telefone" name="telefone">
+            <label for="item-comer">O que vai comer?</label>
+            <select id="item-comer" name="item-comer">
+                <option value="coxinha">Coxinha</option>
+                <option value="sfiha">Sfiha</option>
+                <option value="bolinha">Bolinha de Queijo</option>
+            </select>
+
+            <label for="quantidade-comida">Quantidade</label>
+            <input type="number" id="quantidade-comida" name="quantidade-comida" min="1">
+            <label for="item-beber">O que vai beber?</label>
+            <select id="item-beber" name="item-beber">
+                <option value="coca-cola">Coca-cola</option>
+                <option value="fanta">Fanta</option>
+                <option value="energetico">Energetico</option>
+            </select>
+
+            <label for="quantidade-bebida">Quantidade</label>
+            <input type="number" id="quantidade-bebida" name="quantidade-bebida" min="1">
+            <button type="submit">Fazer Pedido</button>
+        </form>
+    </div>
+</body>
+
+</html>
