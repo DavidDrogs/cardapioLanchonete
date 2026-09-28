@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #fdf6e3;
@@ -42,4 +43,12 @@ form {
 a, button {
     display: block;
     margin-top: 10px;
+}
+@media (max-width: 600px) { 
+    .categorias {
+        flex-direction: column;
+    }
+    .container {
+        padding: 10px;
+    }
 }
