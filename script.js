@@ -52,8 +52,10 @@ cardapioSecao.style.display = "none";
 btnVerCardapio.addEventListener("click", function() {
     const nome = document.querySelector("#nome").value;
     
-    if (nome === "") {
-        alert("Por favor, preencha seu nome antes de continuar");
+    const regexNome = /^[A-Za-zÀ-ÿ\s]+$/;
+
+    if ( nome === "" || !regexNome.test(nome)) {
+        alert("Por favor, digite um nome valido (somente letras).");
         return;
     }
 
