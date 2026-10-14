@@ -59,6 +59,24 @@ btnVerCardapio.addEventListener("click", function() {
         return;
     }
 
+    const telefone = document.querySelector("#telefone").value;
+
+    const regexTelefone = /^[0-9]{10,11}$/;
+
+    if (telefone === "" || !regexTelefone.test(telefone)) {
+        alert("Por favor, digite um telefone valido ");
+        return;
+    }
+
+    const cpf = document.querySelector("#cpf").value;
+
+    const regexCpf = /^[0-9]{11}$/;
+
+    if (cpf === "" || !regexCpf.test(cpf)) {
+        alert("Por favor, digite um cpf valido");
+        return;
+    }
+
     cliente.style.display = "none";
     cardapioSecao.style.display = "block"
 
@@ -91,3 +109,17 @@ btnConfirmarPagamento.addEventListener("click", function() {
     pagamentoSecao.style.display = "none";
     cardapioSecao.style.display = "block";
 })
+const radiosPagamento = document.querySelectorAll('input[name="pagamento"]');
+const campoTroco = document.querySelector('#campo-troco');
+
+radiosPagamento.forEach(function(radio) {
+    radio.addEventListener("change", function() {
+        if (radio.value === "dinheiro" && radio.checked) {
+            campoTroco.style.display = "block";
+        } else {
+            campoTroco.style.display = "none";
+        }
+    });
+});
+
+
